@@ -2,136 +2,148 @@
 const Pipeline_id = 10074555; //77318083
 const Name = "Website Lead";
 const FormID = "a1fee7c0fc436088e64ba2e8822ba2b3";
-const Website = "https://ascargollc.com";
+const Website = "http://127.0.0.1:5500/";
 
 const CLIENT_ID = "fdc11eb9-5def-42ff-8856-965f2df480e2";
 const CLIENT_SECRET =
   "vwLPrbFSjLFD23faYfkBOhyJ4M712XNLdz2R2EK0ohhd64IWPEkbaJbDoQNwWpbv";
 const REFRESH_TOKEN =
-  "def50200cb00599e746f037dd085aca808c12ae47c287a2e9c05006f7676cda96d037e534ee7ade34e8eae34a88090c4a16029f6f0c75c4ff662ef93738849b8ad44270841b9e934c2a1c635694842b38105ce7ea0b57ee8f73f810c5a58a298ebbb0123d228bc9b51a194c8dc6fc889ced4c988146ada51e89a33c8fd46768a23c05c5c5f0b2e3d69f948b07abb90beee51296cc5550eb5d94416aead5190193b7afd0512aa10a5a599330ee9b2e6deeafca1d2e49ecedd72d80958c9ccc467e4d15f3476bff999d3fa18000cb243aaf1d3c61013ea247ea6bbf514b1e674dd91a005cb018ad4a8a3718efaa379e6c752858fca8ed1f0dea4ee717893de1a1d9dd0b7b3c713cd0ada49e6d65b1fd3c861be81a935829b567563d5cc2642d88ce664e7119959564d6f17c524383b311d719d5a44e4920af556a23cfd7c0f637f2e4ca9e84e634b1ace3f8263412b2375f8edd2e8ded8457928ad653e003ac161ae2bf400b47059e4eb095b6cf5bfce4bd43a32ab09f237a8ca37e288ff806a0887099a6404d76d2dde407ff9b75ae34f449bf6155a1ab00fcbb547f3c7ebbfc594108a7d81977bb50001b0f391080c34b47c74cccf2651d2b9c7dfa7a947f9b4ad63559378b6a5f43fc9b64e612c0a8790d6e4be31caf736991378652c17bc508186388ab026f5ca2fdd76fa6053";
+  "def50200dae9c758faf80df6cc0b94cc0fef7d2d51a5b0db18678a6d73cb9a0131977961ebc56e20c9279d9b844ef00fc8ae18c0b2fa7a3ea3f45e896f5d092b98aa6127e8ab6e17f0cb166bf4b1d6a37e2a469f04f0542bd6d1431e18e6824efc965ede69193679058900cbc07bd256dc3c19ac1dce0b4232d9b9235a0f33aa1d97f341e5871c3e07798921fbdf0e8e7ef4f44a83c1ea8aa4a253a5168642415f025df8dcb0b5385f526a8cdc119802e1037c4fae96e8cbecd95c59b8bb543a9d9c2db3560ffb9e3e31bfa74a11df0f84f75b667e9fe4d02030d991295332c5d28e719c79b858b0dd81892e98f637818c6de34fba0f0ba1aa7d754cb7364ee1d5ab0765faf8db925a98219628a0e880fa664396799c81db1f033de51dbbabaf6fa8fb04a89445b186c9e8a28c894799bc696ae7469e6403248cbecb3328285965f213ac273d198616093ba845d0e5505a61e0874e5c40994a0f88d9ecfe5f876a10c7dfb3757cbc0dd32582c1cb300ab42b19bfc16f522db26034280b83ae65c5b0be0c3536030c6ce4cf353d7975eff0e41bba9ed7b65a0235746f462d9813253b2b3192ba2c2db5cf7c31b5b48374e3f6606d6199f17cef6b28d9a3ce3c31a9b34da6d2f8d339bac259b19108cc621a5911c692058dcd649a58d623d0c2a0ccfafe4c7f964c78ee7bd57d9611";
 
 //fields
-let firstName = "";
-let lastName = "";
-let phone = "";
-let email = "";
-let city = "";
-let state = "";
-let zip = "";
-let exp = "";
-let isTeam = "";
+let firstName = "n";
+let lastName = "n";
+let phone = "n";
+let email = "n";
+let city = "n";
+let state = "n";
+let zip = "n";
+let exp = "n";
+let isTeam = "n";
 let dateunix = Math.floor(Date.now() / 1000);
 
+// Token yangilash funksiyasi
 async function refreshToken() {
   const options = {
     method: "POST",
-    headers: { accept: "application/json", "content-type": "application/json" },
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+    },
     body: JSON.stringify({
-      client_id: CLIENT_ID,
-      client_secret: CLIENT_SECRET,
-      redirect_uri: Website,
-      refresh_token: REFRESH_TOKEN,
-      grant_type: "refresh_token",
+      client_id: CLIENT_ID, // CLIENT_ID ni o'zgartiring
+      client_secret: CLIENT_SECRET, // CLIENT_SECRET ni o'zgartiring
+      redirect_uri: Website, // Website URL ni o'zgartiring
+      refresh_token: REFRESH_TOKEN, // Refresh token ni o'zgartiring
+      grant_type: "refresh_token", // Tokenni yangilash uchun to'g'ri grant_type
     }),
   };
 
-  fetch("https://ascargollc.kommo.com/oauth2/access_token", options)
-    .then((res) => res.json())
-    .then((res) => console.log(res))
-    .catch((err) => console.error(err));
-
-  const refreshToken = "REFRESH_TOKEN";
-  const clientId = "CLIENT_ID";
-  const clientSecret = "YCLIENT_SECRET";
-  const tokenEndpoint = "url";
-
-  const body = new URLSearchParams({
-    grant_type: "refresh_token",
-    refresh_token: refreshToken,
-    client_id: clientId,
-    client_secret: clientSecret,
-  });
-
   try {
-    const response = await fetch(tokenEndpoint, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: body.toString(),
-    });
+    // Token yangilash uchun so'rov yuborish
+    const response = await fetch(
+      "https://ascargollc.kommo.com/oauth2/access_token",
+      options
+    );
+
+    if (!response.ok) {
+      throw new Error(
+        `Xatolik yuz berdi: ${response.status} - ${response.statusText}`
+      );
+    }
 
     const data = await response.json();
-    const newAccessToken = data.access_token;
 
-    localStorage.setItem("accessToken", newAccessToken);
-
-    return newAccessToken;
+    if (data.access_token) {
+      // Yangi access tokenni saqlash
+      localStorage.setItem("accessToken", data.access_token);
+      return data.access_token; // Yangi tokenni qaytarish
+    } else {
+      throw new Error("Access token olishda xatolik yuz berdi.");
+    }
   } catch (error) {
-    console.error("Error refreshing token:", error);
+    console.error("Token yangilashda xatolik:", error);
+    throw error;
   }
 }
 
-const options = {
-  method: "POST",
-  headers: {
-    accept: "application/json",
-    "content-type": "application/json",
-    authorization: localStorage.getItem("accessToken"),
-  },
-  body: JSON.stringify([
-    {
-      source_uid: FormID,
-      source_name: Name,
-      created_at: dateunix,
-      metadata: {
-        form_id: FormID,
-        form_name: Name,
-        form_page: Website,
-        referer: Website,
-        form_sent_at: dateunix,
-      },
-      _embedded: {
-        contacts: [
-          {
-            name: `${firstName} ${lastName}`,
-            first_name: firstName,
-            last_name: lastName,
-            created_at: dateunix,
-            custom_fields_values: [
-              { field_code: "PHONE", values: [{ value: phone }] },
-              { field_code: "EMAIL", values: [{ value: email }] },
-            ],
-          },
-        ],
-      },
+// Formani API'ga yuborish funksiyasi
+async function sendFormData() {
+  const accessToken = localStorage.getItem("accessToken");
+
+  if (!accessToken) {
+    alert("Access token topilmadi, qayta tizimga kirish.");
+    return;
+  }
+
+  const options = {
+    method: "POST",
+
+    headers: {
+      accept: "application/json",
+      "content-type": "application/json",
+      authorization: `Bearer ${accessToken}`, // Authorization headerga tokenni qo‘shish
     },
-  ]),
-};
+    body: JSON.stringify([
+      {
+        source_uid: FormID, // FormID ni o'zgartiring
+        source_name: Name, // Form name ni o'zgartiring
+        created_at: dateunix,
+        metadata: {
+          form_id: FormID, // FormID ni o'zgartiring
+          form_name: Name, // Form name ni o'zgartiring
+          form_page: Website, // Website URL ni o'zgartiring
+          referer: Website, // Website URL ni o'zgartiring
+          form_sent_at: dateunix,
+        },
+        _embedded: {
+          contacts: [
+            {
+              name: `${firstName} ${lastName}`,
+              first_name: firstName,
+              last_name: lastName,
+              created_at: dateunix,
+              custom_fields_values: [
+                { field_code: "PHONE", values: [{ value: phone }] },
+                { field_code: "EMAIL", values: [{ value: email }] },
+              ],
+            },
+          ],
+        },
+      },
+    ]),
+  };
 
-fetch("https://ascargollc.kommo.com/api/v4/leads/unsorted/forms", options)
-  .then((res) => res.json())
-  .then((res) => console.log(res))
-  .catch((err) => console.error(err));
+  try {
+    const response = await fetch(
+      "https://ascargollc.kommo.com/api/v4/leads/unsorted/forms",
+      options
+    );
+    const data = await response.json();
 
+    console.log("Ma'lumot saqlandi:", data);
+    // alert("Ma'lumot muvaffaqiyatli saqlandi!");
+  } catch (error) {
+    console.error("Xatolik yuz berdi:", error);
+    // alert("Xatolik yuz berdi! Qayta urinib ko‘ring.");
+  }
+}
+
+// Submit buttonga event listener qo'shish
 document
   .getElementById("sendMessageButton")
-  .addEventListener("click", async () => {
+  .addEventListener("click", async (event) => {
+    event.preventDefault();
     try {
       // Tokenni yangilash (agar kerak bo'lsa)
-      await refreshToken();
+      const token = await refreshToken();
 
-      // Ma'lumotlarni API'ga yuborish
-      const response = await fetch(
-        "https://ascargollc.kommo.com/api/v4/leads/unsorted/forms",
-        options
-      );
-      const data = await response.json();
-
-      console.log("Ma'lumot saqlandi:", data);
-      alert("Ma'lumot muvaffaqiyatli saqlandi!");
+      if (token) {
+        // Token yangilanganidan so'ng, ma'lumotlarni yuborish
+        await sendFormData();
+      }
     } catch (error) {
       console.error("Xatolik yuz berdi:", error);
-      alert("Xatolik yuz berdi! Qayta urinib ko‘ring.");
+      // alert("Xatolik yuz berdi! Qayta urinib ko‘ring.");
     }
   });
