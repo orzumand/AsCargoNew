@@ -7,7 +7,7 @@ const app = express();
 const PORT = 3000;
 
 // CORS sozlamalari
-app.use(cors());
+app.use(cors({ origin: "https://ascargollc.com" }));
 app.use(bodyParser.json());
 
 // Constants

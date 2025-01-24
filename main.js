@@ -177,7 +177,7 @@ document
     try {
       // Refresh tokenni serverga yuborish
       const response = await fetch(
-        "http://167.71.31.88:3000/api/refresh-token",
+        "https://api.ascargollc.com/api/refresh-token",
         {
           method: "POST",
           headers: {
@@ -235,7 +235,7 @@ async function sendFormData() {
 
   try {
     const response = await fetch(
-      "http://167.71.31.88:3000/api/send-form-data",
+      "https://api.ascargollc.com/api/send-form-data",
       {
         method: "POST",
         headers: {
