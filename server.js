@@ -44,6 +44,7 @@ app.post("/api/refresh-token", async (req, res) => {
     );
 
     const data = await response.json();
+    console.log("API Response:", data);
 
     if (data.access_token) {
       res.json({ access_token: data.access_token });

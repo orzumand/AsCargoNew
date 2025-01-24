@@ -176,13 +176,16 @@ document
 
     try {
       // Refresh tokenni serverga yuborish
-      const response = await fetch("http://localhost:3000/api/refresh-token", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({ refreshToken }),
-      });
+      const response = await fetch(
+        "http://167.71.31.88:3000/api/refresh-token",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ refreshToken }),
+        }
+      );
 
       const data = await response.json();
 
@@ -231,14 +234,17 @@ async function sendFormData() {
   };
 
   try {
-    const response = await fetch("http://localhost:3000/api/send-form-data", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        authorization: `Bearer ${accessToken}`,
-      },
-      body: JSON.stringify(dataToSend),
-    });
+    const response = await fetch(
+      "http://167.71.31.88:3000/api/send-form-data",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${accessToken}`,
+        },
+        body: JSON.stringify(dataToSend),
+      }
+    );
 
     const data = await response.json();
 
