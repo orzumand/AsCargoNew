@@ -38,13 +38,16 @@ async function sendFormData() {
   };
 
   try {
-    const response = await fetch("https://api.ascargollc/api/send-form-data", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(dataToSend),
-    });
+    const response = await fetch(
+      "https://api.ascargollc.com/api/send-form-data",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSend),
+      }
+    );
 
     const data = await response.json();
 
