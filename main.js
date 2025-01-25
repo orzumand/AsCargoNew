@@ -4,8 +4,8 @@ const FormID = "a1fee7c0fc436088e64ba2e8822ba2b3";
 const Website = "https://ascargollc.com";
 
 document
-  .getElementById("sendMessageButton")
-  .addEventListener("click", async (event) => {
+  .getElementById("contactForm")
+  .addEventListener("submit", async (event) => {
     event.preventDefault();
 
     try {
@@ -19,12 +19,12 @@ document
 
 // Formani yuborish
 async function sendFormData() {
-  // Form ma'lumotlarini kiritish
-  const firstName = "test Hayotbek";
-  const lastName = "test Hayotbek";
-  const phone = "998901234567";
-  const email = "test@example.com";
+  const firstName = document.getElementById("name").value;
+  const lastName = document.getElementById("surname").value;
+  const phone = document.getElementById("number").value;
+  const email = document.getElementById("email").value;
   const dateunix = Math.floor(Date.now() / 1000);
+  // Form ma'lumotlarini kiritish
 
   const dataToSend = {
     firstName,
