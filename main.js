@@ -23,6 +23,10 @@ async function sendFormData() {
   const lastName = document.getElementById("surname").value;
   const phone = document.getElementById("number").value;
   const email = document.getElementById("email").value;
+  // const city = document.getElementById("city").value;
+  // const state = document.getElementById("state").value;
+  // const zip = document.getElementById("zip").value;
+  // const isTeam = document.getElementById("isTeam").value;
   const dateunix = Math.floor(Date.now() / 1000);
   // Form ma'lumotlarini kiritish
 
@@ -31,6 +35,10 @@ async function sendFormData() {
     lastName,
     phone,
     email,
+    // city,
+    // state,
+    // zip,
+    // isTeam,
     FormID,
     Name,
     Website,
