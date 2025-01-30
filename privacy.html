@@ -20,6 +20,7 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet" />
 
   <!-- Libraries Stylesheet -->
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet" />
 
   <!-- Customized Bootstrap Stylesheet -->
   <link href="css/style.css" rel="stylesheet" />
@@ -32,7 +33,8 @@
       <div class="col-lg-6 text-center text-lg-left mb-2 mb-lg-0">
         <div class="d-inline-flex align-items-center text-white">
           <small><i class="fa fa-phone-alt mr-2"></i>
-            <a class="text-white" href="tel:+630-686-6569">630-686-6569</a></small>
+            <a class="text-white" href="tel:+630-686-6569">630-686-6569</a>
+          </small>
           <small class="px-3">|</small>
           <small style="text-transform: lowercase">
             <a href="mailto:DISPATCH@ASCARGOLLC.COM"><i class="fa fa-envelope mr-2"></i>DISPATCH@ASCARGOLLC.COM</a>
@@ -57,12 +59,10 @@
   <!-- Topbar End -->
 
   <!-- Navbar Start -->
+  <!-- Navbar Start -->
   <div class="container-fluid p-0">
     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
       <a href="index.html" class="navbar-brand ml-lg-3">
-        <!-- <h1 class="m-0 display-5 text-uppercase text-primary">
-            <i class="fa fa-truck mr-2"></i>Faster
-          </h1> -->
         <img width="80px" src="img/Group (1).png" alt="" />
       </a>
       <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
@@ -78,131 +78,87 @@
       </div>
     </nav>
   </div>
-  <!-- Navbar End -->
+  <!--  Navbar End -->
 
   <!-- Header Start -->
   <div class="jumbotron jumbotron-fluid mb-5">
     <div class="container text-center py-5">
-      <h1 class="text-white display-3">Drive for us</h1>
-      <div class="d-inline-flex align-items-center text-white">
-        <p class="m-0">
-          <a class="text-white">Join Our Expanding Fleet – Drive Toward Success!</a>
-        </p>
-      </div>
+      <h1 class="text-white display-3">Privacy Policy</h1>
     </div>
   </div>
+
   <!-- Header End -->
 
-  <!-- Contact Start -->
+  <!-- About Start -->
   <div class="container-fluid py-5">
     <div class="container">
-      <div class="row">
-        <div class="col-2"></div>
-        <div class="col-8">
-
-          <h1 class="mb-4">Start your application</h1>
-          <div class="contact-form bg-secondary" style="padding: 30px">
-            <div id="success"></div>
-            <form name="sentMessage" id="contactForm">
-              <div class="control-group">
-                <label class="form-group">First name*</label>
-                <input type="text" class="form-control border-0 p-4" id="name" required="required"
-                  data-validation-required-message="Please enter your name" />
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="control-group">
-                <label class="form-group">Last name*</label>
-                <input type="text" class="form-control border-0 p-4" id="surname" required="required"
-                  data-validation-required-message="Please enter your name" />
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="control-group">
-                <div class="row">
-                  <div class="col-6">
-                    <label class="form-group">Phone*</label>
-                    <input type="text" class="form-control border-0 p-4" id="number" required="required"
-                      data-validation-required-message="Please enter your name" />
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="col-6">
-                    <label class="form-group">Email*</label>
-                    <input type="email" class="form-control border-0 p-4" id="email" required="required"
-                      data-validation-required-message="Please enter your email" />
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="control-group">
-                <label class="form-group">City*</label>
-                <input type="text" class="form-control border-0 p-4" id="city" required="required"
-                  data-validation-required-message="Please enter a subject" />
-                <p class="help-block text-danger"></p>
-              </div>
-              <div class="row">
-                <div class="col-6">
-                  <div class="control-group">
-                    <label class="form-group">State*</label>
-                    <input type="text" class="form-control border-0 p-4" id="state" required="required"
-                      data-validation-required-message="Please enter a subject" />
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-                <div class="col-6">
-                  <div class="control-group">
-                    <label class="form-group">Zip*</label>
-                    <input type="text" class="form-control border-0 p-4" id="zip" required="required"
-                      data-validation-required-message="Please enter a subject" />
-                    <p class="help-block text-danger"></p>
-                  </div>
-                </div>
-
-              </div>
-              <label class="form-group">Are you team friendly?*</label>
-              <div class="input-group">
-
-                <select class="custom-select" id="isTeam">
-                  <option selected>Choose...</option>
-                  <option value="1">Yes</option>
-                  <option value="2">No</option>
-                  <option value="3">Maybe</option>
-                </select>
-              </div>
-              <p></p>
-              <div class="row">
-                <div class="col-1">
-                  <input type="checkbox">
-                </div>
-                <div class="col-11">
-                  <label>
-                    I hereby consent to receive autodialed and/or pre-recorded calls from or on behalf of AS CARGO LLC
-                    at the telephone number provided above
-                  </label>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-1">
-                  <input type="checkbox">
-                </div>
-                <div class="col-11">
-                  <label>
-                    By entering my mobile number and checking the box I consent to receive informational text messages
-                    from AS CARGO LLC.&nbsp;Message frequency varies.&nbsp;Message &amp; Data Rates May Apply.&nbsp;
-                    Text HELP for help and STOP to opt out.&nbsp; View our privacy policy.
-                  </label>
-                </div>
-              </div>
-              <div>
-                <button class="btn btn-primary py-3 px-4" id="sendMessageButton" type="submit">
-                  Apply
-                </button>
-              </div>
-            </form>
-          </div>
+      <div class="row align-items-center">
+        <div class="col-lg-30">
+          <h1 class="mb-4">Privacy Policy</h1>
+          <p class="mb-4">
+            This privacy policy has been created to assist individuals who are concerned
+            about how their 'Personally Identifiable Information' (PII) is handled online.
+            In the context of US privacy law and information security, PII refers to data
+            that can be used alone or combined with other details to identify, contact, or
+            locate a specific person, or to identify an individual within a certain context.
+            Please review our privacy policy thoroughly to understand how we collect, use, protect,
+            or manage your Personally Identifiable Information when you use our website.
+            <br />
+            <br />
+            <b>
+              What personal information do we collect from the people that
+              visit our blog, website or app?
+            </b>
+            <br />
+            <br />
+            When registering on our site, you may be required to provide details such as your name, email address,
+            mailing address, phone number, Social Security number, driver's license number, work history, number of
+            moving violations, any DWI/DUI records, or other relevant information to enhance your experience.
+            <br />
+            <br />
+            <b> When do we collect information?</b>
+            <br />
+            <br />
+            We collect information from you when you fill out a form.
+            <br />
+            <br />
+            <b> How do we use your information? </b>
+            <br />
+            <br />
+            We may utilize the information collected from you when you register, subscribe to our newsletter,
+            participate in a survey or marketing communication, browse the website, or engage with specific site
+            features in the following ways:
+            <br />
+            <br />
+            • To manage and oversee contests, promotions, surveys, or other site activities.
+            <br />
+            <br />
+            • To send occasional emails about your order, as well as updates on other products and services.
+            <br />
+            <br />
+            • To follow up after interactions, such as live chat, email, or phone inquiries.
+            <br />
+            <br />
+            <b> How do we protect your information? </b>
+            <br />
+            <br />
+            Our website undergoes regular scans to detect security vulnerabilities and threats,
+            ensuring a safe browsing experience. We utilize routine malware scanning and store
+            personal information within secure networks, accessible only to authorized personnel
+            with special access privileges, who are required to maintain confidentiality.
+            Additionally, all sensitive and credit-related data you provide is encrypted using Secure Socket Layer (SSL)
+            technology.
+            To protect your personal information, we implement multiple security measures when users enter, submit, or
+            access their data.
+            For convenience, we may store credit card details for more than 60 days to streamline future orders and
+            automate billing processes.
+          </p>
         </div>
       </div>
     </div>
   </div>
-  <!-- Contact End -->
+
+  <!-- About End -->
 
   <!-- Footer Start -->
   <div class="container-fluid pt-5 bg-dark text-white">
@@ -309,10 +265,6 @@
   <!-- JavaScript Libraries -->
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-  <script src="main.js"></script>
-  <!-- Contact Javascript File -->
-
-  <!-- Template Javascript -->
 </body>
 
 </html>
