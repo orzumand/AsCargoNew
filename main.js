@@ -60,14 +60,22 @@ async function sendFormData() {
     const data = await response.json();
 
     if (response.ok) {
-      console.log("Ma'lumot serverga yuborildi:", data);
+      // console.log("Ma'lumot serverga yuborildi:", data);
       // alert("Ma'lumot muvaffaqiyatli yuborildi!");
+      showToast("successToast");
+      document.getElementById("contactForm").reset();
     } else {
       console.error("Xatolik yuz berdi:", data);
+      showToast("errorToast");
       // alert("Ma'lumotni yuborishda xatolik yuz berdi.");
     }
   } catch (error) {
     console.error("Xatolik serverda yuz berdi:", error);
     // alert("Serverda xatolik yuz berdi.");
+    showToast("errorToast");
   }
+}
+function showToast(toastId) {
+  const toastElement = $("#" + toastId);
+  toastElement.toast({ delay: 3000 }).toast("show");
 }
