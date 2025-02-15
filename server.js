@@ -27,8 +27,6 @@ app.use(
 app.use(bodyParser.json());
 
 // Long-lived token (statik token)
-const LONG_LIVED_TOKEN =
-  "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImJmYTlhOTc1MjMwMGMyNDc5ZDQ0NGMzZDZlMDc3YmZlYmQyYjM0YzZmNzVlYWI3ZTc2NDA4MGU1YjE3NWE2MjcwZTBjOWVhZTgyYjdlNzFjIn0.eyJhdWQiOiJmZGMxMWViOS01ZGVmLTQyZmYtODg1Ni05NjVmMmRmNDgwZTIiLCJqdGkiOiJiZmE5YTk3NTIzMDBjMjQ3OWQ0NDRjM2Q2ZTA3N2JmZWJkMmIzNGM2Zjc1ZWFiN2U3NjQwODBlNWIxNzVhNjI3MGUwYzllYWU4MmI3ZTcxYyIsImlhdCI6MTczNzgyMjY2MiwibmJmIjoxNzM3ODIyNjYyLCJleHAiOjE3NDg2NDk2MDAsInN1YiI6IjEyMzUxMTA3IiwiZ3JhbnRfdHlwZSI6IiIsImFjY291bnRfaWQiOjMzODQ5MTQzLCJiYXNlX2RvbWFpbiI6ImtvbW1vLmNvbSIsInZlcnNpb24iOjIsInNjb3BlcyI6WyJjcm0iLCJmaWxlcyIsImZpbGVzX2RlbGV0ZSIsIm5vdGlmaWNhdGlvbnMiLCJwdXNoX25vdGlmaWNhdGlvbnMiXSwiaGFzaF91dWlkIjoiOTFmYjdiNDYtYmYxYy00NTFmLTk2ODgtNGYwNTIxNzM3N2Y3IiwiYXBpX2RvbWFpbiI6ImFwaS1jLmtvbW1vLmNvbSJ9.FAQ2VzOMNfwfXNdzFP3pYcKhnETJjdZBYVANBns83t1xnSbwDgQKwDc2yy6A3BA1i1QHT4UCnLT_XL2Q1VF-P5mb_MxpEnL2fvfRH4HXjxDppV9tVMMmvlFSoF4LEKSI1vlMw_9d958XP9rh7ejpzEGg3GiOrh8cJkcooUTWrVCBKbdd-N_JxXeVXYcUc0pg_xn33Ln1phgP3y8gEEi9gkcWaRgJNfO6sBrPIDNnarcM4f-Yw6sSkKJmN49I_dsnwf2JHNH6R5MQtojD_vaJX00AjxSgujgj7QyvKsRxYamg6RlTXOrcS3gYRBT2GOkdZLiKLZ6LZ5hszi16vVjOeg";
 
 // Test API
 app.get("/", (req, res) => {
@@ -110,8 +108,7 @@ app.post("/api/send-form-data", async (req, res) => {
 
 // Serverni ishga tushirish
 
-const TELEGRAM_BOT_TOKEN = "8044101895:AAG8QtnICJ7TlMkPsR3lsfQMKoEZ8_ciFtI"; // BotFather'dan olingan token
-const TELEGRAM_CHANNEL_ID = "@ascargollc_contact"; // Kanal username yoki ID (ID bo‘lsa, -100 bilan boshlanadi)
+
 
 app.use(bodyParser.json());
 app.post("/send", async (req, res) => {
