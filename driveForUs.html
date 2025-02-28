@@ -129,12 +129,12 @@
 
     <!-- Contact Start -->
     <div class="container-fluid py-5">
-      <div class="container">
+      <div class="container" style="max-width: 700px;" >
         <div class="row">
           <div class="col-2"></div>
-          <div class="col-8">
+          <div class="">
             <h1 class="mb-4">Start your application</h1>
-            <div class="contact-form bg-secondary" style="padding: 30px">
+            <div class="contact-form bg-secondary" style="padding: 15px">
               <div id="success"></div>
               <form name="sentMessage" id="contactForm">
                 <div class="control-group">
@@ -160,8 +160,8 @@
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="control-group">
-                  <div class="row">
-                    <div class="col-6">
+                  
+                    
                       <label class="form-group">Phone*</label>
                       <input
                         type="text"
@@ -171,19 +171,20 @@
                         data-validation-required-message="Please enter your name"
                       />
                       <p class="help-block text-danger"></p>
-                    </div>
-                    <div class="col-6">
-                      <label class="form-group">Email*</label>
-                      <input
-                        type="email"
-                        class="form-control border-0 p-4"
-                        id="email"
-                        required="required"
-                        data-validation-required-message="Please enter your email"
-                      />
-                      <p class="help-block text-danger"></p>
-                    </div>
-                  </div>
+               
+                 
+                
+                </div>
+                <div class="control-group">
+                  <label class="form-group">Email*</label>
+                  <input
+                    type="email"
+                    class="form-control border-0 p-4"
+                    id="email"
+                    required="required"
+                    data-validation-required-message="Please enter your email"
+                  />
+                  <p class="help-block text-danger"></p>
                 </div>
                 <div class="control-group">
                   <label class="form-group">City*</label>
@@ -291,68 +292,73 @@
       </div>
     </div>
     <!-- Contact End -->
-    <div
-      aria-live="polite"
-      aria-atomic="true"
-      class="position-fixed top-0 end-0 p-3"
-      style="z-index: 1050; right: 10px; top: 110px"
-    >
-      <div
-        id="successToast"
-        class="toast bg-success text-white"
-        role="alert"
+
+<div id="toastCon" style="display: none;" >
+
+  
+  <div
+  aria-live="polite"
+  aria-atomic="true"
+  class="position-fixed top-0 end-0 p-3"
+  style="z-index: 1050; right: 10px; top: 10px"
+  >
+  <div
+  id="successToast"
+  class="toast bg-success text-white"
+  role="alert"
         aria-live="assertive"
         aria-atomic="true"
-      >
+        >
         <div class="toast-header text-white bg-success">
           <strong class="mr-auto">✅ Success!</strong>
           <button
-            type="button"
+          type="button"
             class="ml-2 mb-1 close text-white"
             data-dismiss="toast"
             aria-label="Close"
           >
-            <span aria-hidden="true">&times;</span>
-          </button>
+          <span aria-hidden="true">&times;</span>
+        </button>
         </div>
         <div class="toast-body">
           Thank you for your application, we will be in touch with you soon.
         </div>
       </div>
     </div>
-
+    
     <!-- Toast Container (Error) -->
     <div
-      aria-live="polite"
-      aria-atomic="true"
+    aria-live="polite"
+    aria-atomic="true"
       class="position-fixed top-0 end-0 p-3"
-      style="z-index: 1050; right: 10px; top: 110px"
+      style="z-index: 1050; right: 10px; top: 10px"
     >
-      <div
-        id="errorToast"
-        class="toast bg-danger text-white"
-        role="alert"
-        aria-live="assertive"
-        aria-atomic="true"
-      >
-        <div class="toast-header text-white bg-danger">
+    <div
+    id="errorToast"
+    class="toast bg-danger text-white"
+    role="alert"
+    aria-live="assertive"
+    aria-atomic="true"
+    >
+    <div class="toast-header text-white bg-danger">
           <strong class="mr-auto">❌ Error!</strong>
           <button
-            type="button"
-            class="ml-2 mb-1 close text-white"
-            data-dismiss="toast"
-            aria-label="Close"
+          type="button"
+          class="ml-2 mb-1 close text-white"
+          data-dismiss="toast"
+          aria-label="Close"
           >
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="toast-body">Something went wrong. Please try again.</div>
+          <span aria-hidden="true">&times;</span>
+        </button>
       </div>
+      <div class="toast-body">Something went wrong. Please try again.</div>
     </div>
-
-    <!-- Footer Start -->
-    <div class="container-fluid pt-5 bg-dark text-white">
-      <div class="container">
+  </div>
+</div>
+  
+  <!-- Footer Start -->
+  <div class="container-fluid pt-5 bg-dark text-white">
+    <div class="container">
         <div class="row pt-5">
           <div class="col-lg-7 col-md-6">
             <div class="row">
