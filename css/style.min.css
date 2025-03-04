@@ -5683,9 +5683,7 @@ button.bg-dark:focus {
 .border-left {
   border-left: 1px solid #dee2e6 !important;
 }
-.border-0 {
-  border: 0 !important;
-}
+
 .border-top-0 {
   border-top: 0 !important;
 }
@@ -8737,11 +8735,11 @@ p,
   color: #1f1f2e;
   outline: none;
 }
-.navbar-light .navbar-nav .nav-link:hover,
+/* .navbar-light .navbar-nav .nav-link:hover,
 .navbar-light .navbar-nav .nav-link.active {
   color: #fff;
   background: rgb(242, 18, 58);
-}
+} */
 @media (max-width: 991.98px) {
   .navbar-light .navbar-nav .nav-link {
     padding: 10px 15px;
