@@ -102,6 +102,7 @@
             <a href="index.html" class="nav-item nav-link">Home</a>
             <a href="contact.html" class="nav-item nav-link">Contact</a>
             <a href="privacy.html" class="nav-item nav-link">Privacy Policy</a>
+            <a href="terms.html" class="nav-item nav-link">Terms Of Use</a>
             <a href="driveForUs.html" class="nav-item nav-link">Drive for us</a>
           </div>
         </div>
@@ -125,13 +126,13 @@
     <!-- Header End -->
 
     <!-- Contact Start -->
-    <div class="container-fluid  py-5">
-      <div class="container"  style="max-width: 700px; " >
+    <div class="container-fluid py-5">
+      <div class="container" style="max-width: 700px">
         <div class="row">
           <div class="col-2"></div>
           <div class="">
             <h1 class="mb-4">Start your application</h1>
-            <div class="contact-form bg-secondary" style="padding: 15px">
+            <div class="contact-form bg-secondary" style="padding: 15px 35px">
               <div id="success"></div>
               <form name="sentMessage" id="contactForm">
                 <div class="control-group">
@@ -157,21 +158,15 @@
                   <p class="help-block text-danger"></p>
                 </div>
                 <div class="control-group">
-                  
-                    
-                      <label class="form-group">Phone*</label>
-                      <input
-                        type="text"
-                        class="form-control border-0 p-4"
-                        id="number"
-                        required="required"
-                        data-validation-required-message="Please enter your name"
-                        
-                      />
-                      <p class="help-block text-danger"></p>
-               
-                 
-                
+                  <label class="form-group">Phone*</label>
+                  <input
+                    type="text"
+                    class="form-control border-0 p-4"
+                    id="number"
+                    required="required"
+                    data-validation-required-message="Please enter your name"
+                  />
+                  <p class="help-block text-danger"></p>
                 </div>
                 <div class="control-group">
                   <label class="form-group">Email*</label>
@@ -237,7 +232,12 @@
                     <option value="Maybe">Maybe</option>
                   </select>
                 </div>
-                <p></p>
+                <br />
+                <p style="color: black; text-align: justify; font-size: 14px">
+                  By clicking "Apply", you agree to terms of use & privacy
+                  policy provided by the company. By providing my phone number,
+                  I agree to receive text messages.
+                </p>
                 <div class="row">
                   <div class="col-1">
                     <input
@@ -248,10 +248,16 @@
                     />
                   </div>
                   <div class="col-11">
-                    <label for="consent2">
-                      I hereby consent to receive autodialed and/or pre-recorded
-                      calls from or on behalf of AS CARGO LLC at the telephone
-                      number provided above
+                    <label
+                      for="consent2"
+                      style="color: black; text-align: justify"
+                    >
+                      By checking this box, I consent to receive transactional
+                      messages related to my account, orders, or services I have
+                      requested. These messages may include appointment
+                      reminders, order confirmations, and account notifications
+                      among others. Message frequency may vary. Message & Data
+                      rates may apply.Reply HELP for help or STOP to opt-out.
                     </label>
                   </div>
                 </div>
@@ -265,25 +271,37 @@
                     />
                   </div>
                   <div class="col-11">
-                    <label for="consent1">
-                      By entering my mobile number and checking the box I
-                      consent to receive informational text messages from AS
-                      CARGO LLC.&nbsp;Message frequency varies.&nbsp;Message
-                      &amp; Data Rates May Apply.&nbsp; Text HELP for help and
-                      STOP to opt out.&nbsp; View our privacy policy.
+                    <label
+                      for="consent1"
+                      style="color: black; text-align: justify"
+                    >
+                      By checking this box, I consent to receive marketing and
+                      promotional messages, including special offers, discounts,
+                      new product updates among others. Message frequency may
+                      vary. Message & Data rates may apply. Reply HELP for help
+                      or STOP to opt-out.
                     </label>
                   </div>
                 </div>
                 <div>
+                  <br />
                   <button
                     class="btn btn-primary py-3 px-4"
                     id="sendMessageButton"
                     type="submit"
+                    style="width: 100%"
                   >
                     Apply
                   </button>
                 </div>
               </form>
+              <br />
+              <div style="text-align: center">
+                <a href="privacy.html">Privacy Policy</a>
+                |
+                <a href="terms.html">Terms of Service</a>
+              </div>
+              <br />
             </div>
           </div>
         </div>
@@ -291,72 +309,70 @@
     </div>
     <!-- Contact End -->
 
-<div id="toastCon" style="display: none;" >
-
-  
-  <div
-  aria-live="polite"
-  aria-atomic="true"
-  class="position-fixed top-0 end-0 p-3"
-  style="z-index: 1050; right: 10px; top: 10px"
-  >
-  <div
-  id="successToast"
-  class="toast bg-success text-white"
-  role="alert"
-        aria-live="assertive"
+    <div id="toastCon" style="display: none">
+      <div
+        aria-live="polite"
         aria-atomic="true"
+        class="position-fixed top-0 end-0 p-3"
+        style="z-index: 1050; right: 10px; top: 10px"
+      >
+        <div
+          id="successToast"
+          class="toast bg-success text-white"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
         >
-        <div class="toast-header text-white bg-success">
-          <strong class="mr-auto">✅ Success!</strong>
-          <button
-          type="button"
-            class="ml-2 mb-1 close text-white"
-            data-dismiss="toast"
-            aria-label="Close"
-          >
-          <span aria-hidden="true">&times;</span>
-        </button>
+          <div class="toast-header text-white bg-success">
+            <strong class="mr-auto">✅ Success!</strong>
+            <button
+              type="button"
+              class="ml-2 mb-1 close text-white"
+              data-dismiss="toast"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">
+            Thank you for your application, we will be in touch with you soon.
+          </div>
         </div>
-        <div class="toast-body">
-          Thank you for your application, we will be in touch with you soon.
+      </div>
+
+      <!-- Toast Container (Error) -->
+      <div
+        aria-live="polite"
+        aria-atomic="true"
+        class="position-fixed top-0 end-0 p-3"
+        style="z-index: 1050; right: 10px; top: 10px"
+      >
+        <div
+          id="errorToast"
+          class="toast bg-danger text-white"
+          role="alert"
+          aria-live="assertive"
+          aria-atomic="true"
+        >
+          <div class="toast-header text-white bg-danger">
+            <strong class="mr-auto">❌ Error!</strong>
+            <button
+              type="button"
+              class="ml-2 mb-1 close text-white"
+              data-dismiss="toast"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="toast-body">Something went wrong. Please try again.</div>
         </div>
       </div>
     </div>
-    
-    <!-- Toast Container (Error) -->
-    <div
-    aria-live="polite"
-    aria-atomic="true"
-      class="position-fixed top-0 end-0 p-3"
-      style="z-index: 1050; right: 10px; top: 10px"
-    >
-    <div
-    id="errorToast"
-    class="toast bg-danger text-white"
-    role="alert"
-    aria-live="assertive"
-    aria-atomic="true"
-    >
-    <div class="toast-header text-white bg-danger">
-          <strong class="mr-auto">❌ Error!</strong>
-          <button
-          type="button"
-          class="ml-2 mb-1 close text-white"
-          data-dismiss="toast"
-          aria-label="Close"
-          >
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="toast-body">Something went wrong. Please try again.</div>
-    </div>
-  </div>
-</div>
-  
-  <!-- Footer Start -->
-  <div class="container-fluid pt-5 bg-dark text-white">
-    <div class="container">
+
+    <!-- Footer Start -->
+    <div class="container-fluid pt-5 bg-dark text-white">
+      <div class="container">
         <div class="row pt-5">
           <div class="col-lg-7 col-md-6">
             <div class="row">
